@@ -205,7 +205,7 @@
     // include_once "footer.html";
 ?>
 
-<?php
+<!-- <?php
 
 include_once "head.html";
 
@@ -236,4 +236,66 @@ for ($i = 0; $i < 5; $i++)
 
 include_once "footer.html";
 
+?> -->
+
+<!-- // output of form data with post method -->
+<!-- 
+<form action="" method="post">
+    <p>Your name: <input type="text" name="name"/></p>
+    <p>Your age: <input type="text" name="age"/></p>
+    <p><input type="submit"></p>
+</form>
+Hello, <?php echo htmlspecialchars($_POST['name']);?>.
+You are  <?php echo (int)($_POST['age']);?> years old. -->
+<!-- 
+// output of form data with get method -->
+
+<!-- <form action="" method="get">
+    <p>Your name: <input type="text" name="name"/></p>
+    <p>Your age: <input type="text" name="age"/></p>
+    <p><input type="submit"></p>
+</form>
+Hello, <?php echo htmlspecialchars($_GET['name']);?>.
+You are  <?php echo (int)($_GET['age']);?> years old. -->
+
+<!-- Get data from URL string -->
+
+<!-- <?php
+    echo "Data from address string: {$_SERVER['QUERY_STRING']}";
+
+?> -->
+
+<!-- form with few options and array -->
+
+<form action="" <?php echo htmlentities($_SERVER['PHP_SELF']) ?> method="post">
+    <fieldset>
+        <legend>Choose animal</legend>
+        <label for="dog">
+            <input type="checkbox" id="dog" name="animal[]" value="sobaka">
+            Sobaken
+        </label>
+        <label for="cat">
+            <input type="checkbox" id="cat" name="animal[]" value="koshka">
+            koshak
+        </label>
+        <label for="fox">
+            <input type="checkbox" id="fox" name="animal[]" value="lisa">
+            lisenok
+        </label>
+        <label for="pig">
+            <input type="checkbox" id="pig" name="animal[]" value="svynya">
+            svintus
+        </label>
+    </fieldset>
+    <input type="submit" value="send">
+</form>
+
+<?php 
+$animal = isset($_POST['animal']) ? $_POST['animal'] : '';
+if (!empty($animal)) {
+    echo '<br><br> Are choosed: ';
+    foreach ($animal as $a) {
+        echo "<span style=\"color:green\">".htmlenities($a)."</span>";
+    }
+}
 ?>
