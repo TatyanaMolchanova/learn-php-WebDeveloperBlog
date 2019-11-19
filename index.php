@@ -1,3 +1,59 @@
+<?php
+    // $cookie_name = "user";
+    // $cookie_value = "cookie user";
+    // setcookie($cookie_name, $cookie_value, time() +86400);
+
+    // counter of page visiting
+    $counter = isset($_COOKIE['counter']) ? $_COOKIE['counter'] : 0;
+    $counter++;
+    setcookie("counter", $counter);
+    echo $counter;
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<?php
+    // if (!isset($_COOKIE[$cooke_name])) {
+    //     echo "cookie name $cookie_name";
+    //     echo "cookie value $cookie_value";
+    // }
+
+    // delete cookie
+    // setcookie($cookie_name, $cookie_value, time() -3600);
+
+    // if (count($_COOKIE) > 0) {
+    //     echo "cookie are enabled";
+    // } else {
+    //     echo "cookie are disabled";
+    // }
+
+?>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- <?php
     $dat = date("d.m.y");
@@ -267,7 +323,7 @@ You are  <?php echo (int)($_GET['age']);?> years old. -->
 
 <!-- form with few options and array -->
 
-<form action="" <?php echo htmlentities($_SERVER['PHP_SELF']) ?> method="post">
+<!-- <form action="" <?php echo htmlentities($_SERVER['PHP_SELF']) ?> method="post">
     <fieldset>
         <legend>Choose animal</legend>
         <label for="dog">
@@ -289,8 +345,9 @@ You are  <?php echo (int)($_GET['age']);?> years old. -->
     </fieldset>
     <input type="submit" value="send">
 </form>
+-->
 
-<?php 
+<!-- <?php 
 $animal = isset($_POST['animal']) ? $_POST['animal'] : '';
 if (!empty($animal)) {
     echo '<br><br> Are choosed: ';
@@ -298,4 +355,5 @@ if (!empty($animal)) {
         echo "<span style=\"color:green\">".htmlenities($a)."</span>";
     }
 }
-?>
+?>  -->
+
