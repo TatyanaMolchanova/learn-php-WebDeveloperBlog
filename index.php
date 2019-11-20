@@ -1,4 +1,43 @@
 <?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<?php
+$_SESSION["favcolor"] = "red";
+$_SESSION["favpage"] = "home";
+
+echo $_SESSION["favcolor"];
+echo $_SESSION["favpage"];
+
+// delete session
+
+session_unset();
+session_destroy();
+
+?>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <?php
     // $cookie_name = "user";
     // $cookie_value = "cookie user";
     // setcookie($cookie_name, $cookie_value, time() +86400);
@@ -8,10 +47,10 @@
     $counter++;
     setcookie("counter", $counter);
     echo $counter;
-?>
+?> -->
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,7 +77,7 @@
 ?>
 
 </body>
-</html>
+</html> -->
 
 
 
@@ -344,16 +383,18 @@ You are  <?php echo (int)($_GET['age']);?> years old. -->
         </label>
     </fieldset>
     <input type="submit" value="send">
-</form>
--->
+</form> -->
+
 
 <!-- <?php 
 $animal = isset($_POST['animal']) ? $_POST['animal'] : '';
 if (!empty($animal)) {
     echo '<br><br> Are choosed: ';
     foreach ($animal as $a) {
-        echo "<span style=\"color:green\">".htmlenities($a)."</span>";
+        echo "<span style=\"color:green\">".htmlentities($a)."</span>";
     }
 }
 ?>  -->
+
+
 
