@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
 session_start();
-?>
+?> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,7 @@ session_destroy();
 ?>
     
 </body>
-</html>
+</html> -->
 
 
 
@@ -395,6 +395,43 @@ if (!empty($animal)) {
     }
 }
 ?>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- date.timezone -->
+    <!-- date_default_timezone_set("Europe/Moscow"); -->
+<?php
+// part 1
+// echo date("I ds FY h:i:s A");
+// echo date("d FY h:i:s A");
+// echo date("Today d.m.Y");
+
+// part 2 на неделю позже
+// $nextWeek = time() + (7*24*60*60);
+// echo 'Now'.date('Y-m-d')."\n";
+// echo 'Now'.date('Y-m-d', $nextWeek)."\n";
+// echo time();
+
+//part 3 устанавливаем локаль today 
+// setlocale(LC_ALL, '');
+// echo strftime("%B %Y года, %d число. %A, %H:%M");
+
+//part 4 устанавливаем локаль yesterday 
+$time = strtotime("-1 day");
+$yester = date("Y-m-d", $time);
+echo $yester;
+?>
+
+</body>
+</html>
+
 
 
 
